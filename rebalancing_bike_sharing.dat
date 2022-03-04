@@ -1,0 +1,62 @@
+set BICI := bici1, bici3, bici5;
+set PARCHEGGI := parcheggio2, parcheggio4;
+set DEPOSITO := deposito;
+
+param K := 2;
+
+param R := 
+            parcheggio2 1
+            parcheggio4 2;
+
+param T :=
+            deposito bici1 1
+            deposito parcheggio2 8
+            deposito bici3 7
+            deposito parcheggio4 3
+            deposito bici5 3
+
+            bici1 deposito 1
+            bici1 parcheggio2 4
+            bici1 bici3 1
+            bici1 parcheggio4 17
+            bici1 bici5 14
+
+            parcheggio2 deposito 8
+            parcheggio2 bici1 4
+            parcheggio2 bici3 3
+            parcheggio2 parcheggio4 15
+            parcheggio2 bici5 2
+
+            bici3 deposito 7
+            bici3 bici1 1
+            bici3 parcheggio2 3
+            bici3 parcheggio4 3
+            bici3 bici5 18
+
+            parcheggio4 deposito 3
+            parcheggio4 bici1 17
+            parcheggio4 parcheggio2 15
+            parcheggio4 bici3 3
+            parcheggio4 bici5 1
+
+            bici5 deposito 3
+            bici5 bici1 14
+            bici5 parcheggio2 2
+            bici5 bici3 18
+            bici5 parcheggio4 1;
+
+param plus := 
+            deposito 0
+            bici1 1
+            parcheggio2 0
+            bici3 1
+            parcheggio4 0
+            bici5 1;
+
+param minus :=
+            deposito 0
+            bici1 0
+            parcheggio2 1
+            bici3 0
+            parcheggio4 2
+            bici5 0;

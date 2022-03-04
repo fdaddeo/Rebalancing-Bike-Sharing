@@ -1,0 +1,6 @@
+reset;
+option solver gurobi;
+model rebalancing_bike_sharing.mod;
+data rebalancing_bike_sharing.dat;
+solve;
+display x;
