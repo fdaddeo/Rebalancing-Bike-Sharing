@@ -2,11 +2,11 @@ set BICI := bici1, bici3, bici5;
 set PARCHEGGI := parcheggio2, parcheggio4;
 set DEPOSITO := deposito;
 
-param K := 2;
+param K := 1;
 
 param R := 
-            parcheggio2 1
-            parcheggio4 2;
+            parcheggio2 2
+            parcheggio4 1;
 
 param T :=
             deposito bici1 1
@@ -56,7 +56,7 @@ param plus :=
 param minus :=
             deposito 0
             bici1 0
-            parcheggio2 1
+            parcheggio2 2
             bici3 0
-            parcheggio4 2
+            parcheggio4 1
             bici5 0;
